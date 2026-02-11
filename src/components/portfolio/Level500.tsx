@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Layers } from "lucide-react";
+import { ChevronLeft, ChevronRight, Layers, ArrowRight } from "lucide-react"; 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer"; // <--- Updated Import
+import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer";
+import { useNavigate } from "react-router-dom"; 
 
 type MediaItem = {
   type: "image" | "video";
@@ -223,6 +224,7 @@ const gridItems: GridItem[] = [
 const Level500 = () => {
   const [selectedAlbum, setSelectedAlbum] = useState<string[] | null>(null);
   const [albumIndex, setAlbumIndex] = useState(0);
+  const navigate = useNavigate(); 
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -246,18 +248,21 @@ const Level500 = () => {
 
   const handleAlbumPrevious = () => {
     if (selectedAlbum) {
-      setAlbumIndex(albumIndex === 0 ? selectedAlbum.length - 1 : albumIndex - 1);
+      setAlbumIndex(
+        albumIndex === 0 ? selectedAlbum.length - 1 : albumIndex - 1
+      );
     }
   };
 
   const handleAlbumNext = () => {
     if (selectedAlbum) {
-      setAlbumIndex(albumIndex === selectedAlbum.length - 1 ? 0 : albumIndex + 1);
+      setAlbumIndex(
+        albumIndex === selectedAlbum.length - 1 ? 0 : albumIndex + 1
+      );
     }
   };
 
-const renderMedia = (item: GridItem) => {
-    // 👇 DEFINED HERE: Normal size, Medium weight, with New Line support
+  const renderMedia = (item: GridItem) => {
     const textClasses = "text-white text-sm md:text-base font-medium whitespace-pre-line";
 
     if (item.type === "stat") {
@@ -284,8 +289,7 @@ const renderMedia = (item: GridItem) => {
             className="relative w-full h-full object-cover rounded-lg"
           />
           <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 z-10">
-            <Layers className="w-3 h-3" />
-            +{item.albumImages.length - 1} More
+            <Layers className="w-3 h-3" />+{item.albumImages.length - 1} More
           </div>
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12 rounded-b-lg">
             <p className={textClasses}>{item.text}</p>
@@ -314,7 +318,7 @@ const renderMedia = (item: GridItem) => {
     if (item.type === "video" && item.media) {
       return (
         <div className="relative w-full h-full min-h-[250px] group">
-          <CustomVideoPlayer 
+          <CustomVideoPlayer
             src={item.media[0].src}
             className="w-full h-full"
           />
@@ -345,10 +349,10 @@ const renderMedia = (item: GridItem) => {
                 ))}
               </div>
               <div className="w-full h-full relative">
-                 <CustomVideoPlayer 
-                   src={videos[0].src}
-                   className="w-full h-full"
-                 />
+                <CustomVideoPlayer
+                  src={videos[0].src}
+                  className="w-full h-full"
+                />
               </div>
             </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12 pointer-events-none">
@@ -398,7 +402,8 @@ const renderMedia = (item: GridItem) => {
             500 Level - The Victory Lap
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            The final chapter. From resumption to graduation. Every moment mattered.
+            The final chapter. From resumption to graduation. Every moment
+            mattered.
           </p>
         </motion.div>
 
@@ -422,7 +427,10 @@ const renderMedia = (item: GridItem) => {
         </motion.div>
 
         {/* Album Lightbox */}
-        <Dialog open={selectedAlbum !== null} onOpenChange={() => setSelectedAlbum(null)}>
+        <Dialog
+          open={selectedAlbum !== null}
+          onOpenChange={() => setSelectedAlbum(null)}
+        >
           <DialogContent className="max-w-4xl p-0 bg-background/95 backdrop-blur-md border-border overflow-hidden">
             <AnimatePresence mode="wait">
               {selectedAlbum && (
@@ -445,7 +453,6 @@ const renderMedia = (item: GridItem) => {
                     </p>
                   </div>
 
-                  {/* Navigation buttons */}
                   <button
                     onClick={handleAlbumPrevious}
                     className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/80 border border-border flex items-center justify-center hover:bg-background transition-colors"
@@ -478,9 +485,31 @@ const renderMedia = (item: GridItem) => {
         <p className="text-2xl md:text-3xl font-light text-foreground mb-4">
           "Arriesgar Nada, Ganar Nada"
         </p>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground mb-12">
           Risk nothing, gain nothing. Thank you for being part of my journey.
         </p>
+
+        <div className="flex justify-center pb-20">
+          <button
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate("/induction");
+            }}
+            className="group relative flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-amber-600 px-8 py-5 rounded-full shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105"
+          >
+            <div className="text-left">
+              <p className="text-black/60 text-xs font-bold uppercase tracking-widest mb-0.5">
+                The Next Chapter
+              </p>
+              <p className="text-black text-xl font-black uppercase tracking-wide">
+                View Induction
+              </p>
+            </div>
+            <div className="bg-black/20 p-2 rounded-full group-hover:translate-x-1 transition-transform">
+              <ArrowRight className="w-6 h-6 text-black" />
+            </div>
+          </button>
+        </div>
       </motion.div>
     </section>
   );

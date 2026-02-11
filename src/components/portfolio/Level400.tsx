@@ -1,7 +1,7 @@
 import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer";
 import { motion } from "framer-motion";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { ArrowLeft, ArrowRight } from "lucide-react"; // <--- 1. NEW IMPORTS
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type CardType = "image" | "split" | "grid-3" | "grid-5" | "video";
 

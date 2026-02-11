@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer"; // <--- 1. NEW IMPORT
+import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer";
 
 interface GridItem {
   id: number;
@@ -48,8 +48,6 @@ const gridItems: GridItem[] = [
 ];
 
 const Level100 = () => {
-  // Removed unused videoHandlers hook
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -73,7 +71,6 @@ const Level100 = () => {
   const renderMedia = (item: GridItem) => {
     switch (item.type) {
       case "video":
-        // 👇 2. UPDATED VIDEO PLAYER LOGIC
         return (
           <CustomVideoPlayer 
             src={item.media as string} 
@@ -179,7 +176,6 @@ const Level100 = () => {
               {/* Overlay Text (not for stat type) */}
               {item.type !== "stat" && (
                 <div 
-                  // 👇 3. ADDED pointer-events-none TO ALLOW CLICKING
                   className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-5 pt-12 pointer-events-none"
                 >
                   <p className="text-white text-sm md:text-base font-medium leading-relaxed whitespace-pre-line">
@@ -190,7 +186,6 @@ const Level100 = () => {
 
               {/* Hover Effect */}
               <motion.div
-                // 👇 4. ADDED pointer-events-none HERE TOO
                 className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}

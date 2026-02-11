@@ -49,13 +49,13 @@ const CustomVideoPlayer = ({ src, className }: CustomVideoPlayerProps) => {
         }}
       />
 
-      {/* --- CUSTOM CENTER PLAY BUTTON (Updated Sizes) --- */}
+      {/* CUSTOM CENTER PLAY BUTTON */}
       {!isPlaying && (
         <div 
           onClick={handlePlayClick}
           className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all cursor-pointer z-10"
         >
-          {/* 👇 CHANGED SIZES HERE 👇 */}
+
           <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 shadow-xl group-hover:scale-110 transition-transform duration-300">
             <Play className="w-5 h-5 md:w-6 md:h-6 text-white fill-white ml-0.5" />
           </div>

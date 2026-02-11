@@ -134,7 +134,6 @@ const Level200 = () => {
           </div>
         );
       case "video":
-        // 👇 UPDATED: Using CustomVideoPlayer here
         return (
           <div className="w-full h-64 rounded-xl overflow-hidden relative">
             <CustomVideoPlayer 

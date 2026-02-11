@@ -13,7 +13,7 @@ const sliceImages = [
 const sliceAnimations = [
   // First Slice (Left Image): Slide up from bottom
   { initial: { y: "100%", opacity: 0 }, animate: { y: 0, opacity: 1 } },
-  // Second Slice (Right Image): Slide down from top (Or zoom if you prefer)
+  // Second Slice (Right Image): Slide down from top
   { initial: { y: "-100%", opacity: 0 }, animate: { y: 0, opacity: 1 } },
 ];
 
@@ -22,7 +22,6 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
     <section id="hero-section" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       
       {/* Background Image Slices */}
-      {/* 👇 FIX: Changed from grid-cols-3 to grid-cols-2 👇 */}
       <div className="absolute inset-0 z-0 grid grid-cols-2">
         {sliceImages.map((image, index) => (
           <motion.div
@@ -30,9 +29,9 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
             initial={sliceAnimations[index].initial}
             animate={sliceAnimations[index].animate}
             transition={{
-              duration: 1.5, // Increased slightly for smoother split effect
-              delay: 0.2,    // Small delay so page loads first
-              ease: [0.25, 1, 0.5, 1], // "Bezier" curve for a premium feel
+              duration: 1.5, 
+              delay: 0.2,    
+              ease: [0.25, 1, 0.5, 1], 
             }}
             className="relative h-full overflow-hidden"
           >
@@ -41,13 +40,11 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
               alt={`Background slice ${index + 1}`}
               className="w-full h-full object-top object-cover"
             />
-            {/* Optional: Add a subtle gradient to each slice to blend them better */}
             <div className="absolute inset-0 bg-black/20" />
           </motion.div>
         ))}
       </div>
 
-      {/* Dark Overlay - Keeps text readable */}
       <div className="absolute inset-0 z-10 bg-black/40" />
 
       {/* Main Content */}
@@ -79,7 +76,7 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
             transition={{ delay: 2.3, duration: 0.6 }}
             className="block text-primary font-medium"
           >
-            Worth The Squeeze
+            Worth The Squeeze (MTJWTS)
           </motion.span>
         </motion.h1>
 
@@ -103,7 +100,7 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
         className="absolute bottom-12 z-20 flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer"
         aria-label="Scroll to begin"
       >
-        <span className="text-sm tracking-wide">Begin the Journey</span>
+        <span className="text-sm tracking-wide">DEY WII ME</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

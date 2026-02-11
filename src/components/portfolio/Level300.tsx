@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer"; // <--- 1. Imported Custom Player
+import CustomVideoPlayer from "@/components/portfolio/CustomVideoPlayer";
 
 interface GridItem {
   id: number;
@@ -92,8 +92,6 @@ const gridItems: GridItem[] = [
 ];
 
 const Level300 = () => {
-  // Note: No need for videoHandlers or useAudio here anymore!
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -117,7 +115,6 @@ const Level300 = () => {
   const renderMedia = (item: GridItem) => {
     switch (item.type) {
       case "video":
-        // 👇 2. UPDATED: Using the new Custom Component
         return (
           <CustomVideoPlayer 
             src={item.media as string}
@@ -224,7 +221,6 @@ const Level300 = () => {
               {/* Overlay Text (not for stat type) */}
               {item.type !== "stat" && (
                 <div
-                  // 👇 3. KEEPING THIS: Allows clicks to pass through text
                   className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-5 pt-12 pointer-events-none"
                 >
                   <p className="text-white text-sm md:text-base font-medium leading-relaxed whitespace-pre-line">
@@ -235,7 +231,6 @@ const Level300 = () => {
 
               {/* Hover Effect */}
               <motion.div
-                // 👇 4. KEEPING THIS: Allows clicks to pass through hover effect
                 className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}

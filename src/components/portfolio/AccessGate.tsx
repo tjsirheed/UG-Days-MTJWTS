@@ -139,7 +139,7 @@ const AccessGate = ({ onUnlock }: AccessGateProps) => {
                 className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg gap-2"
               >
                 <Unlock className="w-5 h-5" />
-                Unlock Memory
+                Let's find out
               </Button>
 
               {/* Hint */}
@@ -167,7 +167,7 @@ const AccessGate = ({ onUnlock }: AccessGateProps) => {
             transition={{ duration: 0.6 }}
             className="text-white text-2xl font-light"
           >
-            Welcome in... 🎉
+            You're welcome 🎉
           </motion.div>
         </motion.div>
       )}

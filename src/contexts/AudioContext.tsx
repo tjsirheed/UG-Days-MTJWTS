@@ -5,119 +5,111 @@ interface AudioContextType {
   setIsVideoPlaying: (playing: boolean) => void;
   isMuted: boolean;
   toggleMute: () => void;
-  currentZone: number;
-  setCurrentZone: (zone: number) => void;
+  isInductionMode: boolean;
+  setIsInductionMode: (active: boolean) => void;
 }
 
 const AudioContext = createContext<AudioContextType | null>(null);
 
-const AUDIO_TRACKS = [
-  "/song_1.mp3", 
-  "/song_2.mp3", 
-  "/song_3.mp3", 
-  "/song_4.mp3", 
-  "/song_5.mp3",
-];
+
+const MAIN_TRACK = "/song_1.mp3";       // Plays on the Main Page
+const INDUCTION_TRACK = "/song_4.mp3";  // Plays on Induction Page
 
 export const AudioProvider = ({ children }: { children: ReactNode }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isInductionMode, setIsInductionMode] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [currentZone, setCurrentZone] = useState(0);
   const [hasInteracted, setHasInteracted] = useState(false);
   
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Initialize audio element
+  // 1. INITIALIZE
   useEffect(() => {
-    audioRef.current = new Audio(AUDIO_TRACKS[0]);
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.3;
-    
+    if (!audioRef.current) {
+      audioRef.current = new Audio(MAIN_TRACK);
+      audioRef.current.volume = 0; 
+      audioRef.current.loop = true; 
+    }
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-      if (fadeIntervalRef.current) {
-        clearInterval(fadeIntervalRef.current);
-      }
+      if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
     };
   }, []);
 
-  // Handle first user interaction for autoplay
+  // 2. INTERACTION UNLOCK
   useEffect(() => {
+    if (hasInteracted) return;
     const handleInteraction = () => {
-      if (!hasInteracted && audioRef.current && !isMuted) {
+      if (audioRef.current && !isMuted && audioRef.current.paused) {
         setHasInteracted(true);
-        audioRef.current.play().catch(() => {
-          setHasInteracted(false);
-        });
+        audioRef.current.play().catch(() => {});
       }
     };
-
     window.addEventListener("click", handleInteraction);
-    window.addEventListener("touchstart", handleInteraction);
     window.addEventListener("keydown", handleInteraction);
-
     return () => {
       window.removeEventListener("click", handleInteraction);
-      window.removeEventListener("touchstart", handleInteraction);
       window.removeEventListener("keydown", handleInteraction);
     };
   }, [hasInteracted, isMuted]);
 
-  // Handle zone changes - 5 SECOND CROSSFADE
+  // 3. MASTER SWITCHING LOGIC (Simple A/B Switch)
   useEffect(() => {
     if (!audioRef.current || !hasInteracted) return;
 
-    const newTrack = AUDIO_TRACKS[currentZone];
-    if (audioRef.current.src.endsWith(newTrack)) return;
+    // DECIDE WHICH SONG TO PLAY
+    const targetSrc = isInductionMode ? INDUCTION_TRACK : MAIN_TRACK;
 
-    // Fade out current track (5 Seconds)
-    const fadeOut = () => {
-      if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+    // CHECK: Is it different from what is playing?
+    if (!audioRef.current.src.endsWith(targetSrc)) {
       
-      fadeIntervalRef.current = setInterval(() => {
-        // We use 0.003 step size. (100 steps * 50ms = 5000ms)
-        if (audioRef.current && audioRef.current.volume > 0.003) {
-          audioRef.current.volume = Math.max(0, audioRef.current.volume - 0.003);
-        } else {
-          if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
-          
-          // Switch track and fade in
-          if (audioRef.current) {
-            audioRef.current.src = newTrack;
-            audioRef.current.volume = 0;
-            if (!isMuted && !isVideoPlaying) {
-              audioRef.current.play().catch(() => {});
+      // A. FADE OUT
+      const fadeOut = () => {
+        if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+        
+        fadeIntervalRef.current = setInterval(() => {
+          if (audioRef.current && audioRef.current.volume > 0.05) {
+            audioRef.current.volume = Math.max(0, audioRef.current.volume - 0.05);
+          } else {
+            // B. STOP & SWITCH
+            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+            
+            if (audioRef.current) {
+              audioRef.current.src = targetSrc;
+              audioRef.current.loop = true; 
+              audioRef.current.volume = 0; 
+              audioRef.current.currentTime = 0; // ALWAYS START FRESH
+              
+              if (!isMuted && !isVideoPlaying) {
+                audioRef.current.play().catch(() => {});
+              }
+              fadeIn(); 
             }
-            fadeIn();
           }
-        }
-      }, 50);
-    };
+        }, 50); 
+      };
 
-    // Fade in new track (5 Seconds)
-    const fadeIn = () => {
-      fadeIntervalRef.current = setInterval(() => {
-        if (audioRef.current && audioRef.current.volume < 0.3) {
-          audioRef.current.volume = Math.min(0.3, audioRef.current.volume + 0.003);
-        } else {
-          if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
-        }
-      }, 50);
-    };
+      // C. FADE IN
+      const fadeIn = () => {
+        fadeIntervalRef.current = setInterval(() => {
+          if (audioRef.current && audioRef.current.volume < 0.3) {
+            audioRef.current.volume = Math.min(0.3, audioRef.current.volume + 0.05);
+          } else {
+            if (fadeIntervalRef.current) clearInterval(fadeIntervalRef.current);
+          }
+        }, 50);
+      };
 
-    fadeOut();
-  }, [currentZone, hasInteracted, isMuted, isVideoPlaying]);
+      fadeOut();
+    }
+  }, [isInductionMode, hasInteracted, isMuted, isVideoPlaying]);
 
-  // Handle video playing state - QUICK DUCK (Kept fast for UX)
+
+  // 4. VIDEO DUCKING (Lower volume when video plays)
   useEffect(() => {
     if (!audioRef.current || !hasInteracted) return;
 
     if (isVideoPlaying) {
-      // Fade out quickly when video plays (approx 1 sec) so audio doesn't clash
       const fadeOut = setInterval(() => {
         if (audioRef.current && audioRef.current.volume > 0.02) {
           audioRef.current.volume = Math.max(0, audioRef.current.volume - 0.02);
@@ -127,7 +119,6 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
         }
       }, 30);
     } else if (!isMuted) {
-      // Resume when video stops
       audioRef.current.play().catch(() => {});
       const fadeIn = setInterval(() => {
         if (audioRef.current && audioRef.current.volume < 0.3) {
@@ -139,7 +130,6 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [isVideoPlaying, hasInteracted, isMuted]);
 
-  // Handle mute toggle
   const toggleMute = useCallback(() => {
     setIsMuted((prev) => {
       const newMuted = !prev;
@@ -161,8 +151,8 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
         setIsVideoPlaying,
         isMuted,
         toggleMute,
-        currentZone,
-        setCurrentZone,
+        isInductionMode,
+        setIsInductionMode
       }}
     >
       {children}
@@ -172,8 +162,6 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
 
 export const useAudio = () => {
   const context = useContext(AudioContext);
-  if (!context) {
-    throw new Error("useAudio must be used within an AudioProvider");
-  }
+  if (!context) throw new Error("useAudio must be used within an AudioProvider");
   return context;
 };
