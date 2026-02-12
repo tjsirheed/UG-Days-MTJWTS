@@ -20,16 +20,21 @@ const cards: StoryCard[] = [
     text: "8-month strike just after resumption.\n What do we do now?",
     media: "images/level200/image-1.jpg",
   },
+
+  /*
   {
     type: "image",
     heading: "Strike is Over? 😫",
     text: "Omo! I really struggled to revive the student in me.",
     media: "images/level200/image-2.jpg",
   },
+  */
+
+
   {
     type: "image",
     heading: "Game On! 🎮",
-    text: "Anyways, Head in the game again.",
+    text: "Anyways, Head in the game. \n The strike gave me enough time to explore Cybersecurity and I really enjoyed it.",
     media: "images/level200/image-3.jpg",
   },
   {
@@ -45,13 +50,13 @@ const cards: StoryCard[] = [
   },
   {
     type: "video",
-    heading: "MAT223 📉",
-    text: "Analysis for Non-majors? \n Never again!",
+    heading: "Some courses were just too hard",
+    text: " One of them is Analysis for Non-majors \n Never again!",
     media: "videos/level200/video-1.mp4",
   },
   {
     type: "video",
-    heading: "The TEL241 Project",
+    heading: "First Class Project",
     text: "Digital Display System.",
     media: "videos/level200/video-2.mp4",
   },

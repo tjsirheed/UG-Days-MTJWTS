@@ -76,7 +76,7 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
             transition={{ delay: 2.3, duration: 0.6 }}
             className="block text-primary font-medium"
           >
-            Worth The Squeeze (MTJWTS)
+            Worth The Squeeze
           </motion.span>
         </motion.h1>
 
@@ -100,7 +100,7 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
         className="absolute bottom-12 z-20 flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors cursor-pointer"
         aria-label="Scroll to begin"
       >
-        <span className="text-sm tracking-wide">DEY WII ME</span>
+        <span className="text-sm tracking-wide">DEY WII ME </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

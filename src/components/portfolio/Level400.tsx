@@ -17,19 +17,19 @@ const cards: StoryCard[] = [
   {
     type: "image",
     heading: "400 Level Mehn! 🤯",
-    text: "I took 8 courses with 4 practicals. What do you mean I have to write 4 reports in a week?",
+    text: "I took 8 courses with 4 practicals. \n What do you mean I have to write 4 reports in a week?",
     media: "images/level400/image1.jpg",
   },
   {
     type: "image",
     heading: "Zoological Garden 🦁",
-    text: "This was my first time at the Zoo.",
+    text: "This was my first time at the Zoo tho",
     media: "images/level400/zoo.jpg",
   },
   {
     type: "split",
     heading: "Last Skin? 😅",
-    text: "That stage when you barb last skin? Yeah, that happened.",
+    text: "That stage when you barb last skin? \n Yeah, that happened.",
     media: [
       "images/level400/shave1.jpg",
       "images/level400/shave2.jpg",
@@ -47,7 +47,7 @@ const cards: StoryCard[] = [
   {
     type: "split",
     heading: "Power System 2 ⚡",
-    text: "Just finished the exam here. It was... breathtaking (and not in a good way).",
+    text: "Just finished the exam here. \n It was... breathtaking (and not in a good way).",
     media: [
       "images/level400/PS1.jpg",
       "images/level400/PS2.jpg",
@@ -56,19 +56,19 @@ const cards: StoryCard[] = [
   {
     type: "image",
     heading: "Awba Dam 🌊",
-    text: "Fun time at the dam. Her view tho.",
+    text: "Fun time at the dam. \n Her view tho.",
     media: "images/level400/awba.jpg",
   },
   {
     type: "image",
     heading: "TESA Conference 👔",
-    text: "Showed up again. Never missed one since 200 Level.",
+    text: "Showed up again. \nNever missed one since 200 Level.",
     media: "images/level400/conf.jpg",
   },
   {
     type: "grid-3",
     heading: "IT at VAAV Solutions 💻",
-    text: "Work mode activated. Building real things.",
+    text: "Evidence dey ooo",
     media: [
       "images/level400/IT1.jpg",
       "images/level400/IT3.jpg",
@@ -79,13 +79,13 @@ const cards: StoryCard[] = [
   {
     type: "image",
     heading: "Final Year Loading ⏳",
-    text: "Looking at final year... Vamos jooor!",
+    text: "Looking at final year... \n Vamos jooor!",
     media: "images/level400/finals.jpg",
   },
   {
     type: "split",
-    heading: "Random Moments 📸",
-    text: "400 level IT Defense. Here are some random shots from that day.",
+    heading: "For the record",
+    text: "400 level IT Defense.",
     media: [
       "images/level400/defense4.jpg",
       "images/level400/defense3.jpg",
@@ -210,7 +210,7 @@ const Level400 = () => {
                 <h3 className="font-semibold text-xl text-foreground mb-3">
                   {card.heading}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                   {card.text}
                 </p>
               </div>

@@ -14,14 +14,14 @@ const gridItems: GridItem[] = [
     id: 1,
     type: "image",
     media: "images/level100/level1.jpg",
-    text: "First Picture on campus. \n Masked Up Szn 😷.",
+    text: "This is my first Picture on campus \n Masked Up Szn 😷.",
     span: "large",
   },
   {
     id: 2,
     type: "image",
     media: "images/level100/fine2.jpg",
-    text: "Virtual classes? \n I settled for 4-Point Makers tutorials instead. Iykyk.",
+    text: "Virtual classes were not so bad IMO \n I just dey fresh dey go 😂.",
     span: "large",
   },
   {
@@ -38,6 +38,8 @@ const gridItems: GridItem[] = [
     text: "I tried to mimic a character and ended up looking like an aspiring politician 😂",
     span: "large",
   },
+
+  /*
   {
     id: 6,
     type: "image",
@@ -45,6 +47,8 @@ const gridItems: GridItem[] = [
     text: "Limit your TDB guys! \n I was sick for PHY102 exams but still pulled through.",
     span: "large",
   },
+*/
+
 ];
 
 const Level100 = () => {

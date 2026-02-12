@@ -32,7 +32,7 @@ const gridItems: GridItem[] = [
     id: 5,
     type: "gallery-2",
     media: ["images/level300/web3.jpg", "images/level300/webb3.jpg"],
-    text: "I was really grinding Web3 here. \n Good old days mehn!",
+    text: "I was really grinding Web3 here \n Good old days mehn!",
     span: "large",
   },
   {
@@ -62,7 +62,7 @@ const gridItems: GridItem[] = [
     id: 9,
     type: "image",
     media: "images/level300/newtour.jpg",
-    text: "Industrial Tour at TCN and RAIN ⚙️",
+    text: "Industrial Tour at TCN and RAIN",
   },
   {
     id: 10,
@@ -74,7 +74,7 @@ const gridItems: GridItem[] = [
     id: 12,
     type: "gallery-2",
     media: ["images/level300/new1.jpg", "images/level300/new2.jpg"],
-    text: "99% Faith, 1% Chance. \n AlhamduliLlah. 🙏",
+    text: "99% Faith, 1% Chance. \n AlhamduliLlah 🙏",
   },
   {
     id: 15,
@@ -86,7 +86,7 @@ const gridItems: GridItem[] = [
     id: 14,
     type: "gallery-2",
     media: ["images/level300/defense1.jpg", "images/level300/defense2.jpg"],
-    text: "300 Level SIWES Defense ✅",
+    text: "300 Level SIWES Defense",
     span: "large",
   },
 ];

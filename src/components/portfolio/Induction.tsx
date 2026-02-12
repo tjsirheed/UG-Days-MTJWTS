@@ -85,7 +85,7 @@ const Induction = () => {
           </motion.div>
 
           <h1 className="text-5xl md:text-8xl font-thin tracking-tight mb-6">
-            The <span className="text-yellow-400 font-bold drop-shadow-2xl">Induction</span>
+            Induction <span className="text-yellow-400 font-bold drop-shadow-2xl">Pictures</span>
           </h1>
           
           <div className="h-1 w-24 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-8 opacity-50" />
@@ -93,7 +93,6 @@ const Induction = () => {
           <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
             Officially inducted into the <span className="text-white font-semibold">Nigerian Society of Engineers</span>. 
             <br className="hidden md:block" />
-            The culmination of 5 years of grit, verifying the title.
           </p>
         </motion.div>
 
@@ -128,7 +127,7 @@ const Induction = () => {
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-yellow-400/90 mb-4">
              <Check className="w-5 h-5" />
-             <span className="text-sm font-bold tracking-widest uppercase">Clock it</span>
+             <span className="text-sm font-bold tracking-widest uppercase">Clock it! 🤏</span>
           </div>
           <p className="text-3xl md:text-5xl font-light italic text-white/90 font-serif">
             "Graduate Engineer TIJANI, SAHEED OLUWASEGUN."
