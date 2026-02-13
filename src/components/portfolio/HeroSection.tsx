@@ -86,8 +86,8 @@ const HeroSection = ({ onScrollClick }: HeroSectionProps) => {
           transition={{ delay: 2.5, duration: 0.6 }}
           className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
         >
-          This is a collection of some moments,
-          lessons, and memories from my undergraduate journey.
+          This is a collection of some moments
+          and memories from my undergraduate journey.
         </motion.p>
       </motion.div>
 

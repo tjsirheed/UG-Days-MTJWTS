@@ -46,8 +46,8 @@ const cards: StoryCard[] = [
   },
   {
     type: "split",
-    heading: "Power System 2",
-    text: "Just finished the exam here. \n It was... breathtaking (and not in a good way).",
+    heading: "The Exam on this day mehn!",
+    text: "It was... breathtaking and not in a good way.",
     media: [
       "images/level400/PS1.jpg",
       "images/level400/PS2.jpg",
