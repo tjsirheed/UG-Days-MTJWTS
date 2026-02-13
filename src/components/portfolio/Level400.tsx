@@ -16,13 +16,13 @@ interface StoryCard {
 const cards: StoryCard[] = [
   {
     type: "image",
-    heading: "400 Level Mehn! 🤯",
+    heading: "400 Level Mehn!",
     text: "I took 8 courses with 4 practicals. \n What do you mean I have to write 4 reports in a week?",
     media: "images/level400/image1.jpg",
   },
   {
     type: "image",
-    heading: "Zoological Garden 🦁",
+    heading: "Zoological Garden",
     text: "This was my first time at the Zoo tho",
     media: "images/level400/zoo.jpg",
   },
@@ -37,7 +37,7 @@ const cards: StoryCard[] = [
   },
   {
     type: "split",
-    heading: "Still Fresh Sha 😎",
+    heading: "Still Fresh Sha",
     text: "Drip is eternal even with the shaved head",
     media: [
       "images/level400/shave3.jpg",
@@ -46,7 +46,7 @@ const cards: StoryCard[] = [
   },
   {
     type: "split",
-    heading: "Power System 2 ⚡",
+    heading: "Power System 2",
     text: "Just finished the exam here. \n It was... breathtaking (and not in a good way).",
     media: [
       "images/level400/PS1.jpg",
@@ -55,19 +55,19 @@ const cards: StoryCard[] = [
   },
   {
     type: "image",
-    heading: "Awba Dam 🌊",
+    heading: "Awba Dam",
     text: "Fun time at the dam. \n Her view tho.",
     media: "images/level400/awba.jpg",
   },
   {
     type: "image",
-    heading: "TESA Conference 👔",
-    text: "Showed up again. \nNever missed one since 200 Level.",
+    heading: "TESA Conference",
+    text: "Showed up again. \n Never missed one since 200 Level.",
     media: "images/level400/conf.jpg",
   },
   {
     type: "grid-3",
-    heading: "IT at VAAV Solutions 💻",
+    heading: "IT at VAAV Innovative Solutions",
     text: "Evidence dey ooo",
     media: [
       "images/level400/IT1.jpg",
