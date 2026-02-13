@@ -54,7 +54,7 @@ const gridItems: GridItem[] = [
     text: "IEEE-IMS Workshop.",
     media: [
       { type: "image", src: "images/level500/image1.jpg" },
-      { type: "image", src: "images/level500/image2.jpg" },
+      //{ type: "image", src: "images/level500/image2.jpg" },
       { type: "video", src: "videos/level500/video1.mp4" },
     ],
   },
