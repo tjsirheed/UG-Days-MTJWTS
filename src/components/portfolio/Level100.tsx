@@ -14,7 +14,7 @@ const gridItems: GridItem[] = [
     id: 1,
     type: "image",
     media: "images/level100/level1.jpg",
-    text: "This picture was waken on February 22, 2021 \n First day on Campus",
+    text: "This picture was taken on February 22, 2021 \n First day on Campus",
     span: "large",
   },
   {

@@ -51,7 +51,7 @@ const cards: StoryCard[] = [
   {
     type: "video",
     heading: "Some courses were just too hard",
-    text: " One of them is Analysis for Non-majors \n Never again!",
+    text: " One of them is Analysis for Non-majors (MAT 223) \n Maths majors dey try!",
     media: "videos/level200/video-1.mp4",
   },
   {
