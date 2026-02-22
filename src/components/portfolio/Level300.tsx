@@ -14,7 +14,7 @@ const gridItems: GridItem[] = [
     id: 1,
     type: "image",
     media: "images/level300/image1.jpg",
-    text: "God abeg",
+    text: "The 300 level hype is very true. \n God abeg",
   },
   {
     id: 2,
@@ -39,13 +39,13 @@ const gridItems: GridItem[] = [
     id: 6,
     type: "image",
     media: ["images/level300/awo.jpg"],
-    text: "Shot a video at Awo court and the project ghosted us later. ",
+    text: "Shot a video at Awo court but the project ghosted us",
   },
   {
     id: 7,
     type: "image",
     media: "images/level300/waves2.jpg",
-    text: "Just a good day to feel my waves again.",
+    text: "Just a good day to feel my waves",
   },
   {
     id: 8,
@@ -65,16 +65,16 @@ const gridItems: GridItem[] = [
     text: "Industrial Tour at TCN and RAIN",
   },
   {
-    id: 10,
-    type: "image",
-    media: ["images/level300/loya.jpg"],
-    text: "Second semester exams really tested me but I survived it all",
-  },
-  {
     id: 12,
     type: "gallery-2",
     media: ["images/level300/new1.jpg", "images/level300/new2.jpg"],
     text: "99% Faith, 1% Chance. \n AlhamduliLlah 🙏",
+  },
+  {
+    id: 10,
+    type: "image",
+    media: ["images/level300/loya.jpg"],
+    text: "Second semester exams really tested me but I survived it all",
   },
   {
     id: 15,

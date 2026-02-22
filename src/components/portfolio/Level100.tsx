@@ -14,7 +14,7 @@ const gridItems: GridItem[] = [
     id: 1,
     type: "image",
     media: "images/level100/level1.jpg",
-    text: "This is my first Picture on campus \n Masked Up Szn 😷.",
+    text: "This picture was waken on February 22, 2021 \n First day on Campus",
     span: "large",
   },
   {
@@ -35,7 +35,7 @@ const gridItems: GridItem[] = [
     id: 5,
     type: "image",
     media: "images/level100/vote.jpg",
-    text: "I tried to mimic a character and ended up looking like an aspiring politician 😂",
+    text: "I was trying to mimic a character and ended up looking like an aspiring politician 😂",
     span: "large",
   },
 

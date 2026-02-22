@@ -56,8 +56,8 @@ const cards: StoryCard[] = [
   },
   {
     type: "video",
-    heading: "First Class Project",
-    text: "Digital Display System.",
+    heading: "200 level class Project",
+    text: "I was demonstrating a Digital Display System here.",
     media: "videos/level200/video-2.mp4",
   },
   {

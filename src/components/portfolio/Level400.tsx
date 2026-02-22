@@ -17,19 +17,13 @@ const cards: StoryCard[] = [
   {
     type: "image",
     heading: "400 Level Mehn!",
-    text: "I took 8 courses with 4 practicals. \n What do you mean I have to write 4 reports in a week?",
+    text: "The hard part of this level was the number of practical reports we had to write in a week",
     media: "images/level400/image1.jpg",
-  },
-  {
-    type: "image",
-    heading: "Zoological Garden",
-    text: "This was my first time at the Zoo tho",
-    media: "images/level400/zoo.jpg",
   },
   {
     type: "split",
     heading: "Last Skin? 😅",
-    text: "That stage when you barb last skin? \n Yeah, that happened.",
+    text: "I decided to go on a very low cut here. \n Might do it more often in the future",
     media: [
       "images/level400/shave1.jpg",
       "images/level400/shave2.jpg",
@@ -55,6 +49,12 @@ const cards: StoryCard[] = [
   },
   {
     type: "image",
+    heading: "Zoological Garden",
+    text: "This was my first time at the Zoo though",
+    media: "images/level400/zoo.jpg",
+  },
+  {
+    type: "image",
     heading: "Awba Dam",
     text: "Fun time at the dam. \n Her view tho.",
     media: "images/level400/awba.jpg",
@@ -62,7 +62,7 @@ const cards: StoryCard[] = [
   {
     type: "image",
     heading: "TESA Conference",
-    text: "Showed up again. \n Never missed one since 200 Level.",
+    text: "Showed up as usual \n Never missed one since 200 Level.",
     media: "images/level400/conf.jpg",
   },
   {

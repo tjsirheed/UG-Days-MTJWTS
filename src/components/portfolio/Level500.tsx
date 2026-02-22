@@ -32,6 +32,12 @@ const gridItems: GridItem[] = [
     text: "You dey find me for class ke? 😂",
     media: [{ type: "video", src: "videos/level500/class.mp4" }],
   },
+    {
+    id: 5,
+    type: "video",
+    text: "Finalist no dey fear, we've seen it all already.",
+    media: [{ type: "video", src: "videos/level500/unserious.mp4" }],
+  },
   {
     id: 3,
     type: "cluster",
@@ -43,12 +49,6 @@ const gridItems: GridItem[] = [
     ],
   },
   {
-    id: 12,
-    type: "video",
-    text: "I chest one nice heartbreak along the line sha",
-    media: [{ type: "video", src: "videos/level500/break1.mp4" }],
-  },
-  {
     id: 4,
     type: "cluster",
     text: "IEEE-IMS Workshop.",
@@ -57,12 +57,6 @@ const gridItems: GridItem[] = [
       { type: "image", src: "images/level500/image2.jpg" },
       { type: "video", src: "videos/level500/video1.mp4" },
     ],
-  },
-  {
-    id: 5,
-    type: "video",
-    text: "I was very unserious in first semester oooo...",
-    media: [{ type: "video", src: "videos/level500/unserious.mp4" }],
   },
   {
     id: 10,
@@ -95,7 +89,7 @@ const gridItems: GridItem[] = [
   {
     id: 9,
     type: "cluster",
-    text: "Final exams next week? \n Still showed up for the best tech event in Ibadan.",
+    text: "Final exams the coming week? \n Still showed up for the best tech event in Ibadan as a volunteer.",
     media: [
       { type: "image", src: "images/level500/fest1.jpeg" },
       { type: "image", src: "images/level500/fest2.jpeg" },
@@ -104,7 +98,7 @@ const gridItems: GridItem[] = [
   {
     id: 18,
     type: "video",
-    text: "Project Wahala?",
+    text: "Project Wahala? I was there too",
     media: [{ type: "video", src: "videos/level500/red.mp4" }],
   },
   {
@@ -130,7 +124,7 @@ const gridItems: GridItem[] = [
   {
     id: 22,
     type: "image",
-    text: "Two days to defense and project is not working? \n 94 minutes defeat? Never!",
+    text: "Two days to defense and project is not working? \n 94 minutes defeat? \nNever!",
     media: [
       { type: "image", src: "images/level500/tired1.jpg" },
     ],
@@ -138,7 +132,7 @@ const gridItems: GridItem[] = [
   {
     id: 23,
     type: "album",
-    text: "Internal Defense. 📁",
+    text: "Internal Defense",
     media: [{ type: "image", src: "images/level500/real10.jpg" }],
     albumImages: [
       "images/level500/real1.jpg",
@@ -154,7 +148,7 @@ const gridItems: GridItem[] = [
   {
     id: 24,
     type: "album",
-    text: "External Defense. 🎓",
+    text: "External Defense 🎓",
     media: [{ type: "image", src: "images/level500/new1.jpg" }],
     albumImages: [
       "images/level500/new2.jpg",
@@ -185,7 +179,7 @@ const gridItems: GridItem[] = [
   {
     id: 14,
     type: "cluster",
-    text: "DONE! ✅",
+    text: "DONE!✅",
     media: [
       { type: "image", src: "images/level500/Grad.webp" },
       { type: "image", src: "images/level500/finally.jpg" },
@@ -215,7 +209,7 @@ const gridItems: GridItem[] = [
   {
     id: 29,
     type: "video",
-    text: "I will leave with this. 👋 \n AlhamduliLlah!",
+    text: "I will leave with this👋 \n AlhamduliLlah!",
     media: [{ type: "video", src: "videos/level500/bye.mp4" }],
     wide: true,
   },
