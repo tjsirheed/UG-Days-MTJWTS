@@ -480,7 +480,7 @@ const Level500 = () => {
           "Arriesgar Nada, Ganar Nada"
         </p>
         <p className="text-muted-foreground mb-12">
-          Risk nothing, gain nothing. Thank you for being part of my journey.
+          Risk nothing, gain nothing. Something must go before something come.
         </p>
 
         <div className="flex justify-center pb-20">
@@ -496,7 +496,7 @@ const Level500 = () => {
                 The Next Chapter
               </p>
               <p className="text-black text-xl font-black uppercase tracking-wide">
-                View Induction
+                View Induction Pictures
               </p>
             </div>
             <div className="bg-black/20 p-2 rounded-full group-hover:translate-x-1 transition-transform">

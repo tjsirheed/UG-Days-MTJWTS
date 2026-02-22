@@ -8,8 +8,6 @@ const inductionPhotos = [
   "images/induction/pic1.jpg",
   "images/induction/pic2.jpg",
   "images/induction/pic3.jpg",
-  "images/induction/pic4.jpg",
-  "images/induction/pic5.jpg",
 ];
 
 const Induction = () => {
@@ -130,7 +128,7 @@ const Induction = () => {
              <span className="text-sm font-bold tracking-widest uppercase">Clock it! 🤏</span>
           </div>
           <p className="text-3xl md:text-5xl font-light italic text-white/90 font-serif">
-            "Graduate Engineer TIJANI, SAHEED OLUWASEGUN."
+            "TIJANI, SAHEED OLUWASEGUN (GMNSE) "
           </p>
         </motion.div>
 
