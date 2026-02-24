@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { useAudio } from "@/contexts/AudioContext";
 
 const inductionPhotos = [
-  "images/induction/pic1.jpg",
-  "images/induction/pic2.jpg",
-  "images/induction/pic3.jpg",
+  "images/Induction/EngTJ_1.jpg",
+  "images/Induction/EngTJ_3.jpg",
+  "images/Induction/EngTJ_2.jpg",
 ];
 
 const Induction = () => {
