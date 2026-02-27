@@ -19,7 +19,7 @@ const gridItems: GridItem[] = [
   {
     id: 2,
     type: "video",
-    media: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772199000/video1_hisimd.mp4",
+    media: "videos/level300/video1.mp4",
     text: "At first, everything was about to scatter for real 😫",
   },
   {
@@ -79,7 +79,7 @@ const gridItems: GridItem[] = [
   {
     id: 15,
     type: "video",
-    media: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772199035/dance_dq1gna.mp4",
+    media: "videos/level300/dance.mp4",
     text: "Dinner time? \n Trust me, it was fun. 🕺",
   },
   {
