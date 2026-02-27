@@ -12,8 +12,8 @@ interface AudioContextType {
 const AudioContext = createContext<AudioContextType | null>(null);
 
 
-const MAIN_TRACK = "/song_1.mp3";       // Plays on the Main Page
-const INDUCTION_TRACK = "/song_4.mp3";  // Plays on Induction Page
+const MAIN_TRACK = "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772197768/song_1_rl9lv8.mp3";       // Plays on the Main Page
+const INDUCTION_TRACK = "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772197767/song_4_vmq2ig.mp3";  // Plays on Induction Page
 
 export const AudioProvider = ({ children }: { children: ReactNode }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
