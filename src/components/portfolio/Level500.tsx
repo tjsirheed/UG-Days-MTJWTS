@@ -30,13 +30,13 @@ const gridItems: GridItem[] = [
     id: 2,
     type: "video",
     text: "You dey find me for class ke? 😂",
-    media: [{ type: "video", src: "videos/level500/class.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211613/class_tzaor3.mp4" }],
   },
     {
     id: 5,
     type: "video",
     text: "Finalist no dey fear, we've seen it all already.",
-    media: [{ type: "video", src: "videos/level500/unserious.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211749/unserious_ix0ucu.mp4" }],
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const gridItems: GridItem[] = [
     media: [
       { type: "image", src: "images/level500/SOS.jpg" },
       { type: "image", src: "images/level500/SOS2.jpg" },
-      { type: "video", src: "videos/level500/typeSOS.mp4" },
+      { type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211637/typeSOS_s2wxch.mp4" },
     ],
   },
   {
@@ -55,7 +55,7 @@ const gridItems: GridItem[] = [
     media: [
       { type: "image", src: "images/level500/image1.jpg" },
       { type: "image", src: "images/level500/image2.jpg" },
-      { type: "video", src: "videos/level500/video1.mp4" },
+      { type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211607/video1_yxkcjq.mp4" },
     ],
   },
   {
@@ -99,19 +99,19 @@ const gridItems: GridItem[] = [
     id: 18,
     type: "video",
     text: "Project Wahala? I was there too",
-    media: [{ type: "video", src: "videos/level500/red.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211450/red_arx2ak.mp4" }],
   },
   {
     id: 19,
     type: "video",
     text: "Literature review?",
-    media: [{ type: "video", src: "videos/level500/litrev.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211434/litrev_qxpion.mp4" }],
   },
   {
     id: 20,
     type: "video",
     text: "My supervisor likes aesthetic, so I turned to a spray painter.",
-    media: [{ type: "video", src: "videos/level500/nice1.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211454/nice1_y71bme.mp4" }],
   },
   {
     id: 21,
@@ -204,13 +204,13 @@ const gridItems: GridItem[] = [
     id: 15,
     type: "video",
     text: "It's all by HIS grace.",
-    media: [{ type: "video", src: "videos/level500/thanks.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211200/thanks_uamo97.mp4" }],
   },
   {
     id: 29,
     type: "video",
     text: "I will leave with this👋 \n AlhamduliLlah!",
-    media: [{ type: "video", src: "videos/level500/bye.mp4" }],
+    media: [{ type: "video", src: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772211162/bye_nfeoxb.mp4" }],
     wide: true,
   },
 ];
