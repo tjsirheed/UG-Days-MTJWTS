@@ -52,13 +52,13 @@ const cards: StoryCard[] = [
     type: "video",
     heading: "Some courses were just too hard",
     text: " One of them is Analysis for Non-majors (MAT 223) \n Maths majors dey try!",
-    media: "videos/level200/video-1.mp4",
+    media: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772198589/video-1_ks0wej.mp4",
   },
   {
     type: "video",
     heading: "200 level class Project",
     text: "I was demonstrating a Digital Display System here.",
-    media: "videos/level200/video-2.mp4",
+    media: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772198695/video-2_h1sxd7.mp4",
   },
   {
     type: "image",
@@ -76,7 +76,7 @@ const cards: StoryCard[] = [
     type: "video",
     heading: "Sapa hold my neck for here ",
     text: "Omo... I too drink garri this time ooo.",
-    media: "videos/level200/sapa.mp4",
+    media: "https://res.cloudinary.com/dkw9ilbb4/video/upload/v1772198589/sapa_v1j7zz.mp4",
   },
   {
     type: "image",
