@@ -20,17 +20,6 @@ const cards: StoryCard[] = [
     text: "8-month strike just after resumption.\n What do we do now?",
     media: "images/level200/image-1.jpg",
   },
-
-  /*
-  {
-    type: "image",
-    heading: "Strike is Over? 😫",
-    text: "Omo! I really struggled to revive the student in me.",
-    media: "images/level200/image-2.jpg",
-  },
-  */
-
-
   {
     type: "image",
     heading: "Game On! 🎮",
